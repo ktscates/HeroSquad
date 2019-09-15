@@ -15,7 +15,7 @@ public class App {
 
         get("/", (request, response) -> {
 
-            return new ModelAndView(model, "heroform.hbs");
+            return new ModelAndView(model, "homepage.hbs");
         }, new HandlebarsTemplateEngine());
 
         get("/hero", (request, response) -> {
@@ -28,7 +28,7 @@ public class App {
             model.put("hero_name", hero_name);
             model.put("age", age);
             model.put("squad", squad);
-            model.put("power", power);
+            model.put("powers", powers);
             model.put("weakness", weakness);
             model.put("template", "templates/hero.hbs");
             return new ModelAndView(model, layout);
