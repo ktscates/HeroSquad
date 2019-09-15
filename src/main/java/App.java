@@ -14,24 +14,17 @@ public class App {
         String layout = "templates/layout.hbs";
 
         get("/", (request, response) -> {
-
+            model.put("username", request.session().attribute("username"));
             return new ModelAndView(model, "homepage.hbs");
         }, new HandlebarsTemplateEngine());
 
-        get("/hero", (request, response) -> {
-
-            String hero_name = request.queryParams("hero_name");
-            String age = request.queryParams("age");
-            String squad = request.queryParams("squad");
-            String powers = request.queryParams("powers");
-            String weakness = request.queryParams("weakness");
-            model.put("hero_name", hero_name);
-            model.put("age", age);
-            model.put("squad", squad);
-            model.put("powers", powers);
-            model.put("weakness", weakness);
-            model.put("template", "templates/hero.hbs");
-            return new ModelAndView(model, layout);
+        post("/homepage", (request, response) -> {
+            String inputtedUsername = request.queryParams("username");
+            request.session().attribute("username", inputtedUsername);
+            model.put("username", inputtedUsername);
+            return new ModelAndView(model, "heroform.hbs");
         }, new HandlebarsTemplateEngine());
+
+
     }
 }
