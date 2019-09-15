@@ -23,7 +23,7 @@ public class App {
             String hero_name = request.queryParams("hero_name");
             String age = request.queryParams("age");
             String squad = request.queryParams("squad");
-            String power = request.queryParams("power");
+            String powers = request.queryParams("powers");
             String weakness = request.queryParams("weakness");
             model.put("hero_name", hero_name);
             model.put("age", age);
