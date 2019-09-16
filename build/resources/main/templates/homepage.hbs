@@ -7,20 +7,19 @@
     <h1 class="squads">SQUADS</h1>
     <div class="album py-5 ">
         <div class="container">
-<!--            <div class="row">-->
 
-<!--                <div class="col-md-4">-->
-<!--                    <div class="card  mb-4 box-shadow text-center">-->
-<!--                        <div class="card-body">-->
-<!--                            <h5 class="card-title"> {{squad_name}} </h5>-->
-<!--                            <p class="card-text"> {{cause}} </p>-->
-<!--                            <a class="btn btn-primary" href="/squads/$squad.getId()">Details</a>-->
-<!--                            <p class="text-muted">Max size: {{maxsize}}</p>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
+            {{#if squads}}
+                <p>All Squads</p>
+                {{#each squads}}
 
-<!--            </div>-->
+                    <h5 class="card-title"> {{squad_name}} </h5>
+                    <p class="card-text"> {{cause}} </p>
+        <!--            <a class="btn btn-primary" href="/squads/$squad.getId()">Details</a>-->
+                    <p class="text-muted">{{maxsize}}</p>
+                {{/each}}
+                {{else}}
+                    <p>No Squads</p>
+                {{/if}}
 
             <div>
                 <a class="btn btn-info d-flex justify-content-center" href="/squads/new">Add New Squad</a>

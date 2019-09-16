@@ -1,6 +1,8 @@
 import spark.ModelAndView;
 import spark.template.handlebars.HandlebarsTemplateEngine;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -14,14 +16,21 @@ public class App {
         String layout = "templates/layout.hbs";
 
         get("/", (request, response) -> {
-            model.put("username", request.session().attribute("username"));
+            model.put("squads", Squad.all());
             return new ModelAndView(model, "homepage.hbs");
         }, new HandlebarsTemplateEngine());
 
         post("/homepage", (request, response) -> {
-            model.put("squads", Squad.all());
+//            model.put("squads", Squad.all());
             return new ModelAndView(model, layout);
         }, new HandlebarsTemplateEngine());
+
+        get("/squads", (request, response) -> {
+            List<Squad> squads = Squad.all();
+            model.put("squads", squads);
+            return new ModelAndView(model, "homepage.hbs");
+        }, new HandlebarsTemplateEngine());
+
 
         get("squads/new", (request, response) -> {
 //            model.put("template", "templates/squadform.hbs");
