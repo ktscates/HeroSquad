@@ -22,9 +22,19 @@ public class App {
             String inputtedUsername = request.queryParams("username");
             request.session().attribute("username", inputtedUsername);
             model.put("username", inputtedUsername);
-            return new ModelAndView(model, "heroform.hbs");
+            return new ModelAndView(model, "squadform.hbs");
         }, new HandlebarsTemplateEngine());
 
 
+        post("/squads", (request, response) -> {
+            String squad_name = request.queryParams("squad_name");
+            String cause = request.queryParams("cause");
+            String maxsize = request.queryParams("maxsize");
+            Squad squad = new Squad(squad_name, cause, Integer.parseInt(maxsize));
+            model.put("squad_name", squad.getName());
+            model.put("cause", squad.getCause());
+            model.put("maxsize", squad.getMax());
+            return new ModelAndView(model, "squad.hbs");
+        }, new HandlebarsTemplateEngine());
     }
 }
