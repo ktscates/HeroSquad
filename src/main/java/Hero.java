@@ -33,7 +33,7 @@ public class Hero {
         return squad;
     }
 
-    public String getSpecial_power() {
+    public String getPowers() {
         return powers;
     }
 

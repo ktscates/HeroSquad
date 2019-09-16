@@ -19,9 +19,12 @@ public class App {
         }, new HandlebarsTemplateEngine());
 
         post("/homepage", (request, response) -> {
-            String inputtedUsername = request.queryParams("username");
-            request.session().attribute("username", inputtedUsername);
-            model.put("username", inputtedUsername);
+            model.put("squads", Squad.all());
+            return new ModelAndView(model, layout);
+        }, new HandlebarsTemplateEngine());
+
+        get("squads/new", (request, response) -> {
+//            model.put("template", "templates/squadform.hbs");
             return new ModelAndView(model, "squadform.hbs");
         }, new HandlebarsTemplateEngine());
 
@@ -35,6 +38,26 @@ public class App {
             model.put("cause", squad.getCause());
             model.put("maxsize", squad.getMax());
             return new ModelAndView(model, "squad.hbs");
+        }, new HandlebarsTemplateEngine());
+
+        get("heroes/new", (request, response) -> {
+//            model.put("template", "templates/squadform.hbs");
+            return new ModelAndView(model, "heroform.hbs");
+        }, new HandlebarsTemplateEngine());
+
+        post("/heroes", (request, response) -> {
+            String hero_name = request.queryParams("hero_name");
+            String age = request.queryParams("age");
+            String squad = request.queryParams("squad");
+            String powers = request.queryParams("powers");
+            String weakness = request.queryParams("weakness");
+            Hero hero = new Hero(hero_name, Integer.parseInt(age), squad, powers, weakness);
+            model.put("hero_name", hero.getName());
+            model.put("age", hero.getAge());
+            model.put("squad", hero.getSquad());
+            model.put("powers", hero.getPowers());
+            model.put("weakness", hero.getWeakness());
+            return new ModelAndView(model, "hero.hbs");
         }, new HandlebarsTemplateEngine());
     }
 }

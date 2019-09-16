@@ -9,19 +9,19 @@
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/classAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/App.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/Hero.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Hero.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Home.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Squad.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Squad.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/database/createhero.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/hero.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/hero.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/heroform.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/heroform.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/homepage.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/homepage.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/resources/main/templates/squad.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/squad.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/resources/main/templates/squadform.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/squadform.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Hero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Squad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Squad.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/database/createhero.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/hero.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/hero.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/heroform.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/heroform.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/homepage.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/homepage.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/squad.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/squad.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/squadform.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/squadform.hbs" afterDir="false" />
     </list>
