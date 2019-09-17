@@ -7,18 +7,16 @@ public class Hero {
 
     private String hero_name;
     private int age;
-    private String squad;
     private String powers;
     private String weakness;
-    private static List<Hero> instances = new ArrayList<Hero>();
+    private static List<Hero> instance = new ArrayList<Hero>();
 
-    public Hero(String name, int age, String squad, String powers, String weakness) {
+    public Hero(String name, int age, String powers, String weakness) {
         this.hero_name = name;
         this.age = age;
-        this.squad = squad;
         this.powers = powers;
         this.weakness = weakness;
-        instances.add(this);
+        instance.add(this);
     }
 
     public String getName() {
@@ -29,10 +27,6 @@ public class Hero {
         return age;
     }
 
-    public String getSquad() {
-        return squad;
-    }
-
     public String getPowers() {
         return powers;
     }
@@ -40,7 +34,9 @@ public class Hero {
     public String getWeakness() {
         return weakness;
     }
+
     public static List<Hero> all() {
-        return instances;
+        return instance;
     }
+
 }

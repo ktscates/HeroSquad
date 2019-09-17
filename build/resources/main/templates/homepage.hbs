@@ -4,22 +4,39 @@
 
 {{#partial "content"}}
 
-    <h1 class="squads">SQUADS</h1>
+    <h1>Welcome the the Hero - Squad Application</h1>
     <div class="album py-5 ">
         <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    {{#if squads}}
+                        <p>All Squads</p>
+                        {{#each squads}}
 
-            {{#if squads}}
-                <p>All Squads</p>
-                {{#each squads}}
+                            <h5 class="card-title"> {{squad_name}} </h5>
+                            <p class="card-text"> {{cause}} </p>
+                            <p class="text-muted">{{maxsize}}</p>
+                        {{/each}}
+                    {{else}}
+                            <p>No Squads</p>
+                    {{/if}}
+                </div>
 
-                    <h5 class="card-title"> {{squad_name}} </h5>
-                    <p class="card-text"> {{cause}} </p>
-        <!--            <a class="btn btn-primary" href="/squads/$squad.getId()">Details</a>-->
-                    <p class="text-muted">{{maxsize}}</p>
-                {{/each}}
-                {{else}}
-                    <p>No Squads</p>
-                {{/if}}
+                <div class="col-md-6">
+                    {{#if heroes}}
+                        <p>All Heroes</p>
+                        {{#each heroes}}
+
+                            <h5 class="card-title"> {{hero_name}} </h5>
+                            <p class="card-text"> {{age}} </p>
+                            <p class="text-muted">{{powers}}</p>
+                            <p class="card-text"> {{weakness}} </p>
+                        {{/each}}
+                    {{else}}
+                        <p>No Heroes</p>
+                    {{/if}}
+                </div>
+        </div>
 
             <div>
                 <a class="btn btn-info d-flex justify-content-center" href="/squads/new">Add New Squad</a>

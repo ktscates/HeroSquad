@@ -37,7 +37,6 @@ public class App {
             return new ModelAndView(model, "squadform.hbs");
         }, new HandlebarsTemplateEngine());
 
-
         post("/squads", (request, response) -> {
             String squad_name = request.queryParams("squad_name");
             String cause = request.queryParams("cause");
@@ -49,6 +48,13 @@ public class App {
             return new ModelAndView(model, "squad.hbs");
         }, new HandlebarsTemplateEngine());
 
+        get("/heroes", (request, response) -> {
+            List<Hero> heroes = Hero.all();
+            model.put("heroes", heroes);
+            return new ModelAndView(model, "homepage.hbs");
+        }, new HandlebarsTemplateEngine());
+
+
         get("heroes/new", (request, response) -> {
 //            model.put("template", "templates/squadform.hbs");
             return new ModelAndView(model, "heroform.hbs");
@@ -57,13 +63,11 @@ public class App {
         post("/heroes", (request, response) -> {
             String hero_name = request.queryParams("hero_name");
             String age = request.queryParams("age");
-            String squad = request.queryParams("squad");
             String powers = request.queryParams("powers");
             String weakness = request.queryParams("weakness");
-            Hero hero = new Hero(hero_name, Integer.parseInt(age), squad, powers, weakness);
+            Hero hero = new Hero(hero_name, Integer.parseInt(age), powers, weakness);
             model.put("hero_name", hero.getName());
             model.put("age", hero.getAge());
-            model.put("squad", hero.getSquad());
             model.put("powers", hero.getPowers());
             model.put("weakness", hero.getWeakness());
             return new ModelAndView(model, "hero.hbs");
