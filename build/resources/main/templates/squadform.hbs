@@ -1,0 +1,28 @@
+{{#partial "title" }}
+    Create a Squad
+{{/partial}}
+
+<!--form.hbs.-->
+{{#partial "content"}}
+
+    <form action='/squads' method="post">
+        <h3>Create a Squad</h3>
+
+        <fieldset>
+            <input id="squad_name" name="squad_name" placeholder="Squad Name" type="text" required>
+        </fieldset>
+        <fieldset>
+            <input id="cause" name="cause" placeholder="Cause" type="text" required>
+        </fieldset>
+        <fieldset>
+            <input id="maxsize" name="maxsize" placeholder="Maximum Size" type="text" required>
+        </fieldset>
+        <fieldset>
+            <button class="btn btn-success" name="submit" type="submit" id="submit">Create Squad</button>
+        </fieldset>
+    </form>
+
+    <!--form.hbs.-->
+{{/partial}}
+
+{{> layout.hbs}}
